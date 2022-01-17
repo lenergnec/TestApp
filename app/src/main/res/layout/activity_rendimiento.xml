@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/NectarWhite">
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      tools:context=".Rendimiento"
+      android:background="@color/NectarWhite">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/recorridoEtext"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="86dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="15dp"
+        android:textColorHint="@color/NectarGris"
+        app:boxStrokeColor="@color/PvuNegroAzuladofondo"
+        app:counterEnabled="true"
+        app:helperText="*Campo requerido"
+        app:helperTextTextColor="@color/NectarRojo"
+        app:hintTextColor="@color/NectarGris"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView11"
+        app:prefixText="Km"
+        app:prefixTextColor="@color/NectarRojo"
+        app:startIconDrawable="@drawable/ic_baseline_speed_24"
+        app:endIconMode="clear_text"
+        app:endIconTint="@color/NectarRojo">
+
+      <com.google.android.material.textfield.TextInputEditText
+          android:id="@+id/recorridoEditext"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:hint="Ingrese recorrido en KM"
+          android:inputType="number"
+          android:maxLength="10"
+          android:maxLines="1"
+          app:hintTextColor="@color/PvuAnaranjadofondoletra" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/litrosEtext"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="81dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:textColorHint="@color/NectarGris"
+        app:boxStrokeColor="@color/PvuNegroAzuladofondo"
+        app:helperText="*Campo requerido"
+        app:helperTextTextColor="@color/NectarRojo"
+        app:hintTextColor="@color/NectarGris"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recorridoEtext"
+        app:prefixText="Lts"
+        app:prefixTextColor="@color/NectarRojo"
+        app:startIconDrawable="@drawable/ic_baseline_local_gas_station_24"
+        app:endIconMode="clear_text"
+        app:endIconTint="@color/NectarRojo"
+        app:counterEnabled="true">
+
+      <com.google.android.material.textfield.TextInputEditText
+          android:id="@+id/litrosEditext"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:hint="Ingrese volumen consumido en LTS"
+          android:inputType="numberDecimal"
+          android:maxLength="10"
+          android:maxLines="1" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/calcuRendimiento"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="25dp"
+        android:backgroundTint="@color/PvuNegroAzuladofondo"
+        android:text="Calcular"
+        app:cornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/litrosEtext" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/calcuEficiencia"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="25dp"
+        android:backgroundTint="@color/PvuNegroAzuladofondo"
+        android:text="Calcular"
+        app:cornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rendEsperado" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="25dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="Calcular Rendimiento"
+        android:textColor="@color/PvuNegroAzuladofondo"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="25dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="Calcular Eficiencia"
+        android:textColor="@color/PvuNegroAzuladofondo"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calcuRendimiento" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/rendimientoEt"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="86dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="15dp"
+        android:textColorHint="@color/NectarGris"
+        app:boxStrokeColor="@color/PvuNegroAzuladofondo"
+        app:counterEnabled="true"
+        app:helperText="*Campo requerido"
+        app:helperTextTextColor="@color/NectarRojo"
+        app:hintTextColor="@color/NectarGris"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView12"
+        app:prefixText="Km/Lts"
+        app:prefixTextColor="@color/NectarRojo"
+        app:startIconDrawable="@drawable/ic_baseline_speed_24"
+        app:endIconMode="clear_text"
+        app:endIconTint="@color/NectarRojo">
+
+      <com.google.android.material.textfield.TextInputEditText
+          android:id="@+id/rendimientoEditext"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:hint="Ingrese rendimiento obtenido"
+          android:inputType="number|numberDecimal"
+          android:maxLength="10"
+          android:maxLines="1"
+          android:numeric="decimal"
+          app:hintTextColor="@color/PvuAnaranjadofondoletra" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/rendEsperado"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="81dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:textColorHint="@color/NectarGris"
+        app:boxStrokeColor="@color/PvuNegroAzuladofondo"
+        app:helperText="*Campo requerido"
+        app:helperTextTextColor="@color/NectarRojo"
+        app:hintTextColor="@color/NectarGris"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rendimientoEt"
+        app:prefixText="Km/Lts"
+        app:prefixTextColor="@color/NectarRojo"
+        app:startIconDrawable="@drawable/ic_baseline_speed_24"
+        app:endIconMode="clear_text"
+        app:endIconTint="@color/NectarRojo"
+        app:counterEnabled="true">
+
+      <com.google.android.material.textfield.TextInputEditText
+          android:id="@+id/rendEsperadoEditext"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:hint="Ingrese Rend. Esperado de la unidad"
+          android:inputType="numberDecimal"
+          android:maxLength="10"
+          android:maxLines="1"
+          android:numeric="decimal" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

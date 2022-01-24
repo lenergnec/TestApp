@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginTop="0dp"
+    android:layout_marginStart="0dp"
+    android:background="@drawable/fondo_gradiante1">
+
+    <!-- <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/logorojo" /> -->
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/logorojo" />
+
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:paddingTop="8dp"
+        android:text="Nectar Qa Team"
+        android:textColor="@color/NectarBlue"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="30dp"
+        android:background="@color/NectarGris"/>
+
+
+
+</LinearLayout>

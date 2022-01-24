@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+<item>
+
+    <!-- <shape android:shape="rectangle">
+        <gradient
+            android:startColor="@color/gradiante1"
+            android:endColor="@color/gradiante2"
+            android:type="radial"
+            android:centerY="0.5"
+            android:centerX="0.5"
+            android:gradientRadius="300dp">
+
+            para hacer uno combinado con color al centro
+
+        </gradient>-->
+
+    <shape>
+        <gradient
+            android:startColor="@color/gradiante2"
+            android:endColor="@color/gradiante1"
+            android:type="linear">
+
+        </gradient>
+    </shape>
+
+</item>
+
+
+</selector>

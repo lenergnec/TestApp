@@ -17,4 +17,7 @@
     <color name="NectarWhite">#eaf0f7</color>
     <color name="NectarGris">#9a9ea6</color>
     <color name="NectarRojo">#d52b1e</color>
+    <color name="gradiante1">#FDF3F5</color>
+    <color name="gradiante2">#B5D1E2</color>
+
 </resources>

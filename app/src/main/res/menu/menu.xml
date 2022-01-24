@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="Rend./Eficiencia" android:id="@+id/rendEfic"/>
+    <item android:title="Costos por Km" android:id="@+id/costoKm"/>
+    <item android:title="Impuestos Slv" android:id="@+id/impSlv"/>
+    <item android:title="Mantenimiento" android:id="@+id/mntto" />
+    <item android:title="Descuentos" android:id="@+id/descuentos"/>
+    <item android:title="Co2" android:id="@+id/co2"/>
+    <item
+        android:id="@+id/regresar"
+        android:icon="@drawable/ic_baseline_arrow_back_24"
+        android:title="Menu Principal"
+        app:showAsAction="always"
+        android:iconTint="@color/NectarWhite"/>
+
+</menu>

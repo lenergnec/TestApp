@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/NectarWhite">
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      tools:context=".ImpuestosSlv"
+      android:background="@color/NectarWhite">
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/calcTaxes"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="25dp"
+        android:backgroundTint="@color/NectarBlue"
+        android:text="Calcular"
+        app:cornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/precioGalon" />
+
+    <TextView
+        android:id="@+id/textoImpuestos"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="25dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="Impuestos"
+        android:textColor="@color/PvuNegroAzuladofondo"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/galones"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="86dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="15dp"
+        android:textColorHint="@color/NectarGris"
+        app:boxStrokeColor="@color/PvuNegroAzuladofondo"
+        app:counterEnabled="true"
+        app:helperText="*Campo requerido"
+        app:helperTextTextColor="@color/NectarRojo"
+        app:hintTextColor="@color/NectarGris"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textoImpuestos"
+        app:prefixText="Gls"
+        app:prefixTextColor="@color/NectarRojo"
+        app:startIconDrawable="@drawable/ic_baseline_local_gas_station_24"
+        app:endIconMode="clear_text"
+        app:endIconTint="@color/NectarRojo">
+
+      <com.google.android.material.textfield.TextInputEditText
+          android:id="@+id/galonesText"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:hint="Ingrese volumen en GLS"
+          android:inputType="numberDecimal"
+          android:maxLength="10"
+          android:maxLines="1"
+          android:numeric="decimal"
+          app:hintTextColor="@color/PvuAnaranjadofondoletra" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/precioGalon"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="86dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:textColorHint="@color/NectarGris"
+        app:boxStrokeColor="@color/PvuNegroAzuladofondo"
+        app:counterEnabled="true"
+        app:endIconMode="clear_text"
+        app:endIconTint="@color/NectarRojo"
+        app:helperText="*Campo requerido"
+        app:helperTextTextColor="@color/NectarRojo"
+        app:hintTextColor="@color/NectarGris"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/galones"
+        app:prefixText="$"
+        app:prefixTextColor="@color/NectarRojo"
+        app:startIconDrawable="@drawable/ic_baseline_monetization_on_24">
+
+      <com.google.android.material.textfield.TextInputEditText
+          android:id="@+id/precioGalonText"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:hint="Ingrese precio del galon"
+          android:inputType="number|numberDecimal"
+          android:maxLength="10"
+          android:maxLines="1"
+          android:numeric="decimal"
+          app:hintTextColor="@color/PvuAnaranjadofondoletra" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <view
+        android:id="@+id/view"
+        class="com.google.android.material.appbar.AppBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="40dp"
+        android:background="@color/NectarBlue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calcTaxes" />
+
+    <TextView
+        android:id="@+id/iva"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="20dp"
+        android:text="IVA: 13%"
+        android:textColor="@color/NectarBlue"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView15" />
+
+    <TextView
+        android:id="@+id/cotrans"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="15dp"
+        android:text="Cotrans: $0.10"
+        android:textColor="@color/NectarBlue"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iva" />
+
+    <TextView
+        android:id="@+id/fovial"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="15dp"
+        android:text="Fovial: $0.20"
+        android:textColor="@color/NectarBlue"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cotrans" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="50dp"
+        android:text="Tabla de impuestos"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/NectarRojo"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:typeface="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view" />
+
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

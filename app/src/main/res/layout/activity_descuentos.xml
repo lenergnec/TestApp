@@ -10,11 +10,11 @@
   <androidx.constraintlayout.widget.ConstraintLayout
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      tools:context=".Rendimiento"
+      tools:context=".Descuentos"
       android:background="@color/NectarWhite">
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/recorridoEtext"
+        android:id="@+id/descPorcentual"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="0dp"
         android:layout_height="86dp"
@@ -31,25 +31,25 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView11"
-        app:prefixText="Km"
+        app:prefixText="$"
         app:prefixTextColor="@color/NectarRojo"
-        app:startIconDrawable="@drawable/ic_baseline_speed_24"
+        app:startIconDrawable="@drawable/ic_baseline_monetization_on_24"
         app:endIconMode="clear_text"
         app:endIconTint="@color/NectarRojo">
 
       <com.google.android.material.textfield.TextInputEditText
-          android:id="@+id/recorridoEditext"
+          android:id="@+id/porcentualMontotxt"
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
-          android:hint="Ingrese recorrido en KM"
-          android:inputType="number"
+          android:hint="Ingrese monto $ de la transaccion"
+          android:inputType="numberDecimal"
           android:maxLength="10"
           android:maxLines="1"
-          app:hintTextColor="@color/PvuAnaranjadofondoletra" />
+          app:hintTextColor="@color/PvuAnaranjadofondoletra"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/litrosEtext"
+        android:id="@+id/porcentualValor"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="0dp"
         android:layout_height="81dp"
@@ -64,26 +64,26 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/recorridoEtext"
-        app:prefixText="Lts"
+        app:layout_constraintTop_toBottomOf="@+id/descPorcentual"
+        app:prefixText="$"
         app:prefixTextColor="@color/NectarRojo"
-        app:startIconDrawable="@drawable/ic_baseline_local_gas_station_24"
+        app:startIconDrawable="@drawable/ic_baseline_monetization_on_24"
         app:endIconMode="clear_text"
         app:endIconTint="@color/NectarRojo"
         app:counterEnabled="true">
 
       <com.google.android.material.textfield.TextInputEditText
-          android:id="@+id/litrosEditext"
+          android:id="@+id/porcentualValortxt"
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
-          android:hint="Ingrese volumen consumido en LTS"
+          android:hint="Ingrese valor del descuento"
           android:inputType="numberDecimal"
           android:maxLength="10"
           android:maxLines="1" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/calcuRendimiento"
+        android:id="@+id/calcPorcentual"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="25dp"
@@ -95,10 +95,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/litrosEtext"/>
+        app:layout_constraintTop_toBottomOf="@+id/porcentualValor" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/calcuEficiencia"
+        android:id="@+id/calcAbsoluto"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="25dp"
@@ -110,10 +110,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rendEsperado" />
+        app:layout_constraintTop_toBottomOf="@+id/absolutoPrecio" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/calcGananciaPerdida"
+        android:id="@+id/calcFijo"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="25dp"
@@ -127,7 +127,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Precio" />
+        app:layout_constraintTop_toBottomOf="@+id/fijovalor" />
 
     <TextView
         android:id="@+id/textView11"
@@ -137,11 +137,12 @@
         android:layout_marginTop="20dp"
         android:layout_marginEnd="25dp"
         android:fontFamily="sans-serif-condensed-medium"
-        android:text="Calcular Rendimiento"
+        android:text="Descuento Porcentual"
         android:textColor="@color/PvuNegroAzuladofondo"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -153,34 +154,34 @@
         android:layout_marginTop="32dp"
         android:layout_marginEnd="25dp"
         android:fontFamily="sans-serif-condensed-medium"
-        android:text="Calcular Eficiencia"
+        android:text="Descuento Absoluto"
         android:textColor="@color/PvuNegroAzuladofondo"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/calcuRendimiento" />
+        app:layout_constraintTop_toBottomOf="@+id/calcPorcentual" />
 
     <TextView
-        android:id="@+id/textoImpuestos"
+        android:id="@+id/fijotexto"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="15dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="25dp"
         android:fontFamily="sans-serif-condensed-medium"
-        android:text="R.Tolerancia - Costo MN Ganado o Perdido"
+        android:text="Descuento Fijo"
         android:textColor="@color/PvuNegroAzuladofondo"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/calcuEficiencia" />
+        app:layout_constraintTop_toBottomOf="@+id/calcAbsoluto" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/rendimientoEt"
+        android:id="@+id/absoluto"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="0dp"
         android:layout_height="86dp"
@@ -197,18 +198,18 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView12"
-        app:prefixText="Km/Lts"
+        app:prefixText="Lts"
         app:prefixTextColor="@color/NectarRojo"
-        app:startIconDrawable="@drawable/ic_baseline_speed_24"
+        app:startIconDrawable="@drawable/ic_baseline_local_gas_station_24"
         app:endIconMode="clear_text"
         app:endIconTint="@color/NectarRojo">
 
       <com.google.android.material.textfield.TextInputEditText
-          android:id="@+id/rendimientoEditext"
+          android:id="@+id/absolutoVolumenText"
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
-          android:hint="Ingrese rendimiento obtenido"
-          android:inputType="number|numberDecimal"
+          android:hint="Ingrese volumen"
+          android:inputType="numberDecimal"
           android:maxLength="10"
           android:maxLines="1"
           android:numeric="decimal"
@@ -216,7 +217,42 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/rendEsperado"
+        android:id="@+id/absolutoValor"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="81dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="15dp"
+        android:textColorHint="@color/NectarGris"
+        app:boxStrokeColor="@color/PvuNegroAzuladofondo"
+        app:counterEnabled="true"
+        app:endIconMode="clear_text"
+        app:endIconTint="@color/NectarRojo"
+        app:helperText="*Campo requerido"
+        app:helperTextTextColor="@color/NectarRojo"
+        app:hintTextColor="@color/NectarGris"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/absoluto"
+        app:prefixText="$"
+        app:prefixTextColor="@color/NectarRojo"
+        app:startIconDrawable="@drawable/ic_baseline_monetization_on_24">
+
+      <com.google.android.material.textfield.TextInputEditText
+          android:id="@+id/absolutoValortext"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:hint="Ingrese valor del descuento"
+          android:inputType="numberDecimal"
+          android:maxLength="10"
+          android:maxLines="1"
+          android:numeric="decimal" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/absolutoPrecio"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="0dp"
         android:layout_height="81dp"
@@ -231,19 +267,19 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rendimientoEt"
-        app:prefixText="Km/Lts"
+        app:layout_constraintTop_toBottomOf="@+id/absolutoValor"
+        app:prefixText="$"
         app:prefixTextColor="@color/NectarRojo"
-        app:startIconDrawable="@drawable/ic_baseline_speed_24"
+        app:startIconDrawable="@drawable/ic_baseline_monetization_on_24"
         app:endIconMode="clear_text"
         app:endIconTint="@color/NectarRojo"
         app:counterEnabled="true">
 
       <com.google.android.material.textfield.TextInputEditText
-          android:id="@+id/rendEsperadoEditext"
+          android:id="@+id/absolutoPreciotxt"
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
-          android:hint="Ingrese Rend. Esperado de la unidad"
+          android:hint="Ingrese precio de servicio"
           android:inputType="numberDecimal"
           android:maxLength="10"
           android:maxLines="1"
@@ -251,7 +287,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/KmRecorrido"
+        android:id="@+id/fijolitros"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="0dp"
         android:layout_height="86dp"
@@ -267,19 +303,19 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textoImpuestos"
-        app:prefixText="Km"
+        app:layout_constraintTop_toBottomOf="@+id/fijotexto"
+        app:prefixText="Lts"
         app:prefixTextColor="@color/NectarRojo"
-        app:startIconDrawable="@drawable/ic_baseline_speed_24"
+        app:startIconDrawable="@drawable/ic_baseline_local_gas_station_24"
         app:endIconMode="clear_text"
         app:endIconTint="@color/NectarRojo">
 
       <com.google.android.material.textfield.TextInputEditText
-          android:id="@+id/KmRecorridoEditext"
+          android:id="@+id/fijolitrostext"
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
-          android:hint="Ingrese Km recorrido"
-          android:inputType="number|numberDecimal"
+          android:hint="Ingrese volumen"
+          android:inputType="numberDecimal"
           android:maxLength="10"
           android:maxLines="1"
           android:numeric="decimal"
@@ -287,7 +323,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/RendEsperado"
+        android:id="@+id/fijoprecio"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="0dp"
         android:layout_height="86dp"
@@ -305,94 +341,60 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/KmRecorrido"
-        app:prefixText="Km/Lts"
-        app:prefixTextColor="@color/NectarRojo"
-        app:startIconDrawable="@drawable/ic_baseline_speed_24">
-
-      <com.google.android.material.textfield.TextInputEditText
-          android:id="@+id/RendimientoEsEditext"
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:hint="Ingrese Rend. Esperado de la unidad"
-          android:inputType="number|numberDecimal"
-          android:maxLength="10"
-          android:maxLines="1"
-          android:numeric="decimal"
-          app:hintTextColor="@color/PvuAnaranjadofondoletra" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/LitrosConsumidos"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="0dp"
-        android:layout_height="86dp"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginEnd="15dp"
-        android:textColorHint="@color/NectarGris"
-        app:boxStrokeColor="@color/PvuNegroAzuladofondo"
-        app:counterEnabled="true"
-        app:endIconMode="clear_text"
-        app:endIconTint="@color/NectarRojo"
-        app:helperText="*Campo requerido"
-        app:helperTextTextColor="@color/NectarRojo"
-        app:hintTextColor="@color/NectarGris"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/RendEsperado"
-        app:prefixText="Lts"
-        app:prefixTextColor="@color/NectarRojo"
-        app:startIconDrawable="@drawable/ic_baseline_local_gas_station_24">
-
-      <com.google.android.material.textfield.TextInputEditText
-          android:id="@+id/LitrosConsumidosEditext"
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:hint="Ingrese volumen consumido en LTS"
-          android:inputType="number|numberDecimal"
-          android:maxLength="10"
-          android:maxLines="1"
-          android:numeric="decimal"
-          app:hintTextColor="@color/PvuAnaranjadofondoletra" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/Precio"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="0dp"
-        android:layout_height="86dp"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginEnd="15dp"
-        android:textColorHint="@color/NectarGris"
-        app:boxStrokeColor="@color/PvuNegroAzuladofondo"
-        app:counterEnabled="true"
-        app:endIconMode="clear_text"
-        app:endIconTint="@color/NectarRojo"
-        app:helperText="*Campo requerido"
-        app:helperTextTextColor="@color/NectarRojo"
-        app:hintTextColor="@color/NectarGris"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/LitrosConsumidos"
+        app:layout_constraintTop_toBottomOf="@+id/fijolitros"
         app:prefixText="$"
         app:prefixTextColor="@color/NectarRojo"
         app:startIconDrawable="@drawable/ic_baseline_monetization_on_24">
 
       <com.google.android.material.textfield.TextInputEditText
-          android:id="@+id/PrecioEditext"
+          android:id="@+id/fijopreciotext"
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
-          android:hint="Ingrese precio de combustible en LTS"
+          android:hint="Ingrese valor del descuento"
           android:inputType="number|numberDecimal"
           android:maxLength="10"
           android:maxLines="1"
           android:numeric="decimal"
           app:hintTextColor="@color/PvuAnaranjadofondoletra" />
     </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/fijovalor"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="86dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:textColorHint="@color/NectarGris"
+        app:boxStrokeColor="@color/PvuNegroAzuladofondo"
+        app:counterEnabled="true"
+        app:endIconMode="clear_text"
+        app:endIconTint="@color/NectarRojo"
+        app:helperText="*Campo requerido"
+        app:helperTextTextColor="@color/NectarRojo"
+        app:hintTextColor="@color/NectarGris"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fijoprecio"
+        app:prefixText="$"
+        app:prefixTextColor="@color/NectarRojo"
+        app:startIconDrawable="@drawable/ic_baseline_monetization_on_24">
+
+      <com.google.android.material.textfield.TextInputEditText
+          android:id="@+id/fijovalortext"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:hint="Ingrese precio de servicio"
+          android:inputType="numberDecimal"
+          android:maxLength="10"
+          android:maxLines="1"
+          android:numeric="decimal"
+          app:hintTextColor="@color/PvuAnaranjadofondoletra" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
 
   </androidx.constraintlayout.widget.ConstraintLayout>
 

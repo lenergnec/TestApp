@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn = "navigation_view">
+
+<item android:title="Herramientas de conversion">
+    <menu>
+        <item
+            android:id="@+id/convertirVol"
+            android:icon="@drawable/gasstatuibfalticon"
+            android:title="Convertir Volumen" />
+
+        <item
+            android:id="@+id/convertirDist"
+            android:icon="@drawable/distanceflaticon"
+            android:iconTint="@color/NectarGris"
+            android:title="Convertir Distancias" />
+
+    </menu>
+</item>
+
+    <item android:title="Documentacion">
+    <menu>
+        <item
+            android:id="@+id/documentacion"
+            android:icon="@drawable/review"
+            android:title="Documentacion" />
+    </menu>
+    </item>
+
+    <item android:title="Contacto del desarrollador">
+        <menu>
+            <item
+                android:id="@+id/facebook"
+                android:icon="@drawable/facelogo"
+                android:title="Facebook" />
+
+            <item
+                android:id="@+id/linkedin"
+                android:icon="@drawable/inpersona"
+                android:title="LinkedIn" />
+
+            <item
+                android:id="@+id/WhatsApp"
+                android:icon="@drawable/whatsappflaticon"
+                android:title="WhatsApp" />
+        </menu>
+
+    </item>
+
+
+</menu>
